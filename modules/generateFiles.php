@@ -16,9 +16,11 @@ function generateFilesFun($ruta){
                 // Si es un directorio se recorre recursivamente
                 if (is_dir($ruta_completa)) {
                     echo "<li>" . $archivo . "</li>";
-                    //obtener_estructura_directorios($ruta_completa);
+                    // generateFilesFun($ruta_completa);
                 } else {
-                    echo "<li>" . $archivo . "</li>";
+                    require_once("./modules/whatEsxtension.php");
+                    isaFolder($archivo);
+                    
                 }
             }
         }

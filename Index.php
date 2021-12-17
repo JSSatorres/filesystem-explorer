@@ -54,8 +54,9 @@
     <div class="col-4 secondary">
     <?php
     require_once("./modules/generateFiles.php");
-    $newRoot = $_POST["root"];
-    generateFilesFun("./root/$newRoot");
+    
+    $newRoot = $_GET["root"];
+    generateFilesFun($newRoot);
     ?>
     </div>
     <div class="col-4 primary">Hola</div>
